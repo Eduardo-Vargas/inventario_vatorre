@@ -35,10 +35,10 @@ if(!$product){
        $query  .=" WHERE id ='{$product['id']}'";
        $result = $db->query($query);
                if($result && $db->affected_rows() === 1){
-                 $session->msg('s',"Product updated ");
+                 $session->msg('s',"Producto Modificado ");
                  redirect('product.php', false);
                } else {
-                 $session->msg('d',' Sorry failed to updated!');
+                 $session->msg('d',' No se pudo modificar el producto.');
                  redirect('edit_product.php?id='.$product['id'], false);
                }
 
